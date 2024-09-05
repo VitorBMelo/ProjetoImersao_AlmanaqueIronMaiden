@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almanaque Iron Maiden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Almanaque Iron Maiden</h1>
+    </header>
+    <main>
+        <!-- Seletor de visualização -->
+        <section id="view-selector">
+            <button id="view-discografia" class="active">Visualizar Discografia</button>
+            <button id="view-track-search">Pesquisar Faixas</button>
+        </section>
+        
+        <!-- Seção de filtros (visível apenas na visualização da discografia) -->
+        <section id="filtros-discografia">
+            <input type="text" id="search" placeholder="Pesquisar álbuns...">
+            <select id="ano-filter">
+                <option value="">Filtrar por ano</option>
+            </select>
+            <select id="produtor-filter">
+                <option value="">Filtrar por produtor</option>
+            </select>
+        </section>
+        
+        <!-- Seção de discografia -->
+        <section id="discografia" class="view">
+            <h2>Discografia Completa</h2>
+            <div id="album-container">
+                <ul id="album-list"></ul>
+            </div>
+        </section>
+        
+        <!-- Divisória entre as seções -->
+        <div id="divisoria" class="view"></div>
+        
+        <!-- Seção de resultados da pesquisa de faixas -->
+        <section id="track-results" class="view">
+            <input type="text" id="track-search" placeholder="Pesquisar faixas...">
+            <ul id="track-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Almanaque Iron Maiden. Todos os direitos reservados.</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
